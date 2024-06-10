@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://lighter.tscn" type="PackedScene" id=1]
+[ext_resource path="res://cake.tscn" type="PackedScene" id=2]
+[ext_resource path="res://back.png" type="Texture" id=3]
+
+[node name="world" type="Node2D"]
+
+[node name="Back" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0.239216 )
+position = Vector2( 512, 300 )
+z_index = -10
+texture = ExtResource( 3 )
+
+[node name="cake" parent="." instance=ExtResource( 2 )]
+position = Vector2( 355, 393 )
+scale = Vector2( 1.4, 1.4 )
+
+[node name="lighter" parent="." instance=ExtResource( 1 )]
+position = Vector2( 835, 244 )

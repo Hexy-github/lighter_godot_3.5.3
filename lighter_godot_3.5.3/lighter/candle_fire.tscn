@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://candle_fire.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 15.5, 30 )
+
+[node name="candle_fire" type="KinematicBody2D" groups=["candle_fire"]]
+
+[node name="candle" type="Node2D" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.356863 )
+scale = Vector2( 0.103286, 0.101314 )
+
+[node name="CandleFire" type="Sprite" parent="candle"]
+scale = Vector2( 1, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.5, -2 )
+shape = SubResource( 3 )
